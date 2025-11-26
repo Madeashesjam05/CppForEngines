@@ -17,4 +17,8 @@ void AMyPlayerController::SetupInputComponent()
 	{
 		Subsystem ->AddMappingContext(MappingContext,0);
 	}
+
+	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+
 }
